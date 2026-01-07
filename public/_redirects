@@ -1,0 +1,4 @@
+# SPA fallback - serve index.html for all routes
+# API requests are handled by Netlify Edge Functions
+/*  /index.html  200
+
