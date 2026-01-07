@@ -1,17 +1,114 @@
-# React + Vite
+# Monk Commerce - Product Picker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based Product Picker component for Monk Commerce, featuring drag-and-drop reordering, product search with infinite scroll, variant support, and discount controls.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[https://monk-commerce-fe.netlify.app](https://monk-commerce-fe.netlify.app)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Drag & Drop Reordering** - Reorder products and variants using drag handles
+- **Product Search Modal** - Search products with debounced input and infinite scroll
+- **Variant Support** - Select individual variants or all variants of a product
+- **Discount Controls** - Add percentage or flat discounts to products and variants
+- **Responsive Design** - Works seamlessly across different screen sizes
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Monk-Commerce-
+- **React 19** - UI Library
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool & Dev Server
+- **@dnd-kit** - Drag and Drop functionality
+- **Netlify Edge Functions** - API Proxy for production
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Anshkumar1611/Monk-Commerce-.git
+   cd monk-commerce
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:5173
+   ```
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint |
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── ProductPicker/       # Main product picker container
+│   ├── ProductPickerModal/  # Modal for searching & selecting products
+│   └── ProductRow/          # Individual product row with variants
+├── hooks/
+│   ├── useDebounce.ts       # Debounce hook for search input
+│   ├── useDiscount.ts       # Discount state management
+│   ├── useDraggable.ts      # Drag and drop functionality
+│   └── useProductSearch.ts  # Product search with pagination
+├── services/
+│   └── api.ts               # API service for fetching products
+├── types/
+│   └── index.ts             # TypeScript type definitions
+└── App.tsx                  # Root component
+```
+
+## 🔧 Configuration
+
+### Development
+The Vite dev server proxies API requests to the Monk Commerce API:
+
+```typescript
+// vite.config.ts
+server: {
+  proxy: {
+    '/api': {
+      target: 'https://stageapi.monkcommerce.app',
+      changeOrigin: true,
+      rewrite: (path) => path.replace(/^\/api/, ''),
+    },
+  },
+}
+```
+
+### Production (Netlify)
+API requests are handled by Netlify Edge Functions located in `netlify/edge-functions/`.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Ansh Kumar**
+- GitHub: [@Anshkumar1611](https://github.com/Anshkumar1611)
+- Email: ansh2018gupta@gmail.com
