@@ -1,0 +1,33 @@
+.app {
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+
+.app-header {
+  background: #003d29;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.app-main {
+  padding: 40px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}

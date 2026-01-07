@@ -1,0 +1,251 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-search {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5e5e5;
+  margin: 16px 20px;
+  border-radius: 4px;
+}
+
+.modal-search:focus-within {
+  border-color: #008060;
+  box-shadow: 0 0 0 1px #008060;
+}
+
+.search-icon {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.modal-search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.modal-divider {
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.modal-list {
+  overflow-y: auto;
+  height: 400px;
+}
+
+.product-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.product-row:hover {
+  background: #f9f9f9;
+}
+
+.product-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #008060;
+}
+
+.product-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-title {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.variants-list {
+  padding-left: 70px;
+  background: #fafafa;
+}
+
+.variant-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 0;
+  gap: 12px;
+  cursor: pointer;
+  border-top: 1px solid #f0f0f0;
+}
+
+.variant-row:hover {
+  background: #f0f0f0;
+}
+
+.variant-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #008060;
+}
+
+.variant-title {
+  flex: 1;
+  font-size: 13px;
+  color: #333;
+}
+
+.variant-inventory {
+  font-size: 12px;
+  color: #666;
+  margin-right: 8px;
+}
+
+.variant-price {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  min-width: 70px;
+  text-align: right;
+}
+
+.loading {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-top: 1px solid #e5e5e5;
+  background: #fafafa;
+}
+
+.selected-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-cancel {
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background: #f5f5f5;
+}
+
+.btn-add {
+  padding: 8px 20px;
+  border: none;
+  background: #008060;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-add:hover {
+  background: #006e52;
+}
+
+.btn-add:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+

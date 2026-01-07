@@ -1,0 +1,254 @@
+.product-row-container {
+  margin-bottom: 8px;
+}
+
+.product-main-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.drag-handle {
+  display: grid;
+  grid-template-columns: repeat(2, 5px);
+  gap: 3px;
+  padding: 8px 4px;
+  cursor: grab;
+  opacity: 0.5;
+}
+
+.drag-handle:hover {
+  opacity: 0.8;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.drag-handle span {
+  width: 5px;
+  height: 5px;
+  background: #666;
+  border-radius: 50%;
+}
+
+.row-number {
+  font-size: 14px;
+  color: #333;
+  min-width: 24px;
+}
+
+.product-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 300px;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-input:hover {
+  border-color: #ccc;
+}
+
+.product-input.has-value {
+  border-color: #ccc;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-input.has-value .product-name {
+  color: #333;
+}
+
+.edit-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #008060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn:hover {
+  color: #006e52;
+}
+
+.add-discount-btn {
+  padding: 10px 24px;
+  background: #008060;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.add-discount-btn:hover {
+  background: #006e52;
+}
+
+.add-discount-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.discount-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.discount-input {
+  width: 70px;
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.discount-input:focus {
+  outline: none;
+  border-color: #008060;
+}
+
+.discount-type {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  min-width: 90px;
+}
+
+.discount-type:focus {
+  outline: none;
+  border-color: #008060;
+}
+
+.remove-discount {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #999;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.remove-discount:hover {
+  color: #666;
+}
+
+.variants-toggle-row {
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+  margin-bottom: 8px;
+  margin-left: 410px;
+}
+
+.variants-toggle-btn {
+  background: none;
+  border: none;
+  color: #006d5b;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.variants-toggle-btn:hover {
+  color: #005a4a;
+}
+
+.arrow {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.variants-container {
+  padding-left: 40px;
+  margin-bottom: 8px;
+}
+
+.variant-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  margin-left: 20px;
+}
+
+.variant-name-box {
+  flex: 1;
+  max-width: 240px;
+  padding: 10px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background: white;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.variant-add-discount-btn {
+  padding: 8px 16px;
+  background: #008060;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.variant-add-discount-btn:hover {
+  background: #006e52;
+}
+
+.variant-discount-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.variant-discount-controls .discount-input {
+  width: 60px;
+  padding: 8px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+  text-align: center;
+  background: white;
+}
+
+.variant-discount-controls .discount-type {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  min-width: 80px;
+}
+
